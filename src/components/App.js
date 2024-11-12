@@ -95,7 +95,7 @@ export default function App() {
   const totalPoints = questions.reduce((prev, curr) => prev + curr.points, 0);
 
   useEffect(function () {
-    fetch("http://localhost:5000/questions")
+    fetch("https://my-json-server.typicode.com/divyam-d27/quiz-app/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
